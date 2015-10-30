@@ -4,50 +4,15 @@
  */
 'use strict';
 
-var React = require('react-native');
-var {
+const React = require('react-native');
+
+const {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View,
+  StatusBarIOS,
 } = React;
 
-var GithubIssues = React.createClass({
-  render: function() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
-});
+StatusBarIOS.setHidden(true);
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+import App from "./components/App";
 
-AppRegistry.registerComponent('GithubIssues', () => GithubIssues);
+AppRegistry.registerComponent('GithubIssues', () => App);
